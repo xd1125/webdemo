@@ -3,9 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Tech Welcome</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+            font-family: 'Arial', sans-serif;
+            overflow: hidden;
+        }
+        
+        h1 {
+            color: #00fffc;
+            font-size: 4rem;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            text-shadow: 0 0 10px #00fffc, 
+                         0 0 20px #00fffc, 
+                         0 0 40px #00fffc;
+            animation: glow 2s ease-in-out infinite alternate;
+        }
+
+        @keyframes glow {
+            from {
+                text-shadow: 0 0 10px #00fffc, 
+                             0 0 20px #00fffc, 
+                             0 0 40px #00fffc;
+            }
+            to {
+                text-shadow: 0 0 15px #00fffc, 
+                             0 0 30px #00fffc, 
+                             0 0 60px #00fffc;
+            }
+        }
+
+        /* 网格背景效果 */
+        body::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px);
+            background-size: 30px 30px;
+            z-index: -1;
+        }
+    </style>
 </head>
 <body>
-    <h1>Welcome to my website</h1>
+    <h1>Welcome</h1>
 </body>
 </html>
